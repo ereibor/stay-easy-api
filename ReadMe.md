@@ -20,19 +20,6 @@ cd stayease-booking-api
 npm install
 ```
 
-## Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=stayease
-DB_PORT=3306
-PORT=3000
-```
-
 ## Running the Project
 
 ```bash
