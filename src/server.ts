@@ -13,7 +13,8 @@ const PORT = Number(process.env.PORT || 3000);
 
     // Start server
     app.listen(PORT, () => {
-      console.log(`🚀 StayEase API listening at http://localhost:${PORT}`);
+      console.log(`🚀 StayEase API listening at http://localhost:${PORT}`)
+      console.log(`📖 API documentation available at http://localhost:${PORT}/api-docs`);
     });
   } catch (err) {
     console.error('❌ Failed to start server', err);

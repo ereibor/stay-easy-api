@@ -1,7 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
-import specs from './utils/swagger';
+import specs from './swagger/swagger';
+import propertyRoutes from './routes/propertyRoutes';
+import bookingRoutes from './routes/bookingRoutes';
 
 dotenv.config();
 
@@ -12,7 +14,8 @@ app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 // API Routes
-
+app.use('/properties', propertyRoutes);
+app.use('/bookings', bookingRoutes);
 
 // Root health check
 app.get('/', (req, res) => res.send('StayEase API is running'));
